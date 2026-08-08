@@ -1,12 +1,15 @@
-# RevPert
+# RevPert: predicting candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
 
 **RevPert** is a gallery-native residual reverse-perturbation model: given a
 transcriptomic state contrast \(\Delta Y^\star = Y_B - Y_A\), it ranks catalog
-knockouts whose expression signatures match an observed transcriptomic shift (candidate-driver
-shortlist), using signed Pearson connectivity plus a learned residual score.
+knockouts whose expression signatures match an observed transcriptomic shift
+(candidate-driver shortlist), using signed Pearson connectivity plus a learned
+residual score.
 
 This repository contains analysis code, signature-building utilities, frozen
 numeric tables from the manuscript, and scripts to retrain / rescore RevPert.
+
+Manuscript target: *Nature Biotechnology* (in preparation).
 
 ## Install
 

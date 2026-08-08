@@ -1,0 +1,6 @@
+{
+  "source": "GSE200098",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200098",
+  "definition": "mean(log2(norm+1) resistant) - mean(log2(norm+1) Huh7 parental)",
+  "tag": "gse200098_huh7_sr1"
+}

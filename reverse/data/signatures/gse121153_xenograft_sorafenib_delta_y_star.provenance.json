@@ -1,0 +1,20 @@
+{
+  "source": "GSE121153",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121153",
+  "platform": "GPL570",
+  "tag": "gse121153_xenograft_sorafenib",
+  "resistant": [
+    "GSM3427017",
+    "GSM3427018",
+    "GSM3427019",
+    "GSM3427020",
+    "GSM3427021"
+  ],
+  "parental": [
+    "GSM3427012",
+    "GSM3427013",
+    "GSM3427014"
+  ],
+  "n_probes_mapped": 43534,
+  "definition": "mean(resistant) - mean(parental) on series-matrix intensities, probes collapsed by symbol mean"
+}

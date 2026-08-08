@@ -1,0 +1,16 @@
+{
+  "source": "UCSC Xena TCGA hub",
+  "expression_url": "https://tcga.xenahubs.net/download/TCGA.LIHC.sampleMap/HiSeqV2.gz",
+  "clinical_url": "https://tcga.xenahubs.net/download/TCGA.LIHC.sampleMap/LIHC_clinicalMatrix",
+  "dataset": "TCGA.LIHC.sampleMap/HiSeqV2",
+  "units": "log2(norm_count+1) as hosted by Xena HiSeqV2",
+  "tumor_definition": "TCGA barcode sample type 01 (Primary Solid Tumor)",
+  "control_definition": "TCGA barcode sample type 11 (Solid Tissue Normal)",
+  "n_tumor_samples": 371,
+  "n_normal_samples": 50,
+  "n_genes": 20530,
+  "delta_definition": "disease_minus_control = mean(tumor) - mean(normal)",
+  "claim_boundary": "usage extrapolation for KO prioritization under adjacent\u2192cancer \u0394Y*; not driver discovery or therapeutic claim",
+  "biological_question": "adjacent-normal \u2192 tumor transcriptomic shift; rank KOs whose response matches this acquisition signature",
+  "sign_note": "Previous version used control_minus_disease (reversal). This version flips to disease_minus_control."
+}

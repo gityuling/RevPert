@@ -1,0 +1,5 @@
+cell_line	median_rank_revpert	median_rank_pearson	median_diff_revpert_minus_pearson	boot_mean_diff	boot_ci95_low	boot_ci95_high	n_query	n_boot	wilcoxon_test	wilcoxon_alternative	wilcoxon_statistic	wilcoxon_pvalue	wilcoxon_n_revpert_better	wilcoxon_n_pearson_better	wilcoxon_n_tie
+HepG2	266.0	572.0	-306.0	-306.2725	-379.025	-234.97500000000014	593	2000	wilcoxon_signed_rank	pearson_rank > revpert_rank (RevPert better)	132290.5	1.850501364929105e-27	424	167	2
+K562	25.0	46.0	-21.0	-21.5675	-30.0125	-13.0	272	2000	wilcoxon_signed_rank	pearson_rank > revpert_rank (RevPert better)	28205.0	1.8833615525429019e-19	190	72	10
+RPE1	90.0	185.5	-95.5	-94.93625	-125.0125	-64.48750000000007	384	2000	wilcoxon_signed_rank	pearson_rank > revpert_rank (RevPert better)	57776.5	1.607666146463719e-26	290	86	8
+Jurkat	238.5	574.5	-336.0	-333.52225	-393.0	-268.0	594	2000	wilcoxon_signed_rank	pearson_rank > revpert_rank (RevPert better)	134434.0	5.8873839554787356e-30	419	172	3

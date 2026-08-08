@@ -1,0 +1,18 @@
+{
+  "source": "NCBI GEO GSE14520 (GPL3921 Affymetrix HT HG-U133A)",
+  "matrix_file": "reverse/data/signatures/raw_gse14520/GSE14520-GPL3921_series_matrix.txt.gz",
+  "annot_file": "reverse/data/signatures/raw_gse14520/GPL3921.annot.gz",
+  "citation_note": "Roessler et al. HCC adjacent/tumor microarray cohort",
+  "units": "GEO series_matrix processed probe intensities (approx log-scale as deposited)",
+  "tumor_definition": "Sample characteristic Tissue: Liver Tumor Tissue (or title)",
+  "control_definition": "Sample characteristic Tissue: Liver Non-Tumor Tissue (or title)",
+  "n_tumor_samples": 225,
+  "n_normal_samples": 220,
+  "n_probes_in_matrix": 22268,
+  "n_genes_after_collapse": 13183,
+  "probe_collapse": "mean of annotated probes per Gene symbol (first symbol if ///)",
+  "delta_definition": "disease_minus_control = mean(tumor) - mean(non-tumor)",
+  "claim_boundary": "usage extrapolation for KO prioritization under adjacent\u2192cancer \u0394Y*; not driver discovery or therapeutic claim",
+  "biological_question": "adjacent-normal \u2192 tumor transcriptomic shift; rank KOs whose response matches this acquisition signature",
+  "role": "external cohort replication of Task-2 (independent of TCGA-LIHC RNA-seq)"
+}

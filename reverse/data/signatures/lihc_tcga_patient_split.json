@@ -1,0 +1,12 @@
+{
+  "A": {
+    "n_tumor": 184,
+    "n_normal": 25,
+    "path": "reverse/data/signatures/lihc_delta_y_star_tcga_foldA.tsv"
+  },
+  "B": {
+    "n_tumor": 187,
+    "n_normal": 25,
+    "path": "reverse/data/signatures/lihc_delta_y_star_tcga_foldB.tsv"
+  }
+}

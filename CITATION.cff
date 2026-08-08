@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "RevPert: predicting candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation"
+message: If you use this software, please cite it using these metadata.
+type: software
+authors:
+  - family-names: Liang
+    given-names: Shiyang
+    email: shiyang.liang@outlook.com
+  - family-names: Li
+    given-names: Yunqi
+    email: Yunqi206@126.com
+abstract: >-
+  Gallery-native residual reverse perturbation scoring for candidate genetic
+  drivers of observed transcriptomic state transitions.
+keywords:
+  - reverse perturbation
+  - Perturb-seq
+  - transcriptomic state transition
+  - drug resistance
+license: MIT

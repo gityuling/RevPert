@@ -1,0 +1,11 @@
+{
+  "source": "GSE145389",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145389",
+  "line": "HepG2",
+  "drug": "palbociclib (PD-0332991)",
+  "target": "CDK6",
+  "expected_arm": "A",
+  "note": "n=1 per condition in deposited tables",
+  "definition": "log2(count+1)_PD - log2(count+1)_CTL on gene symbols",
+  "n_genes": 24462
+}

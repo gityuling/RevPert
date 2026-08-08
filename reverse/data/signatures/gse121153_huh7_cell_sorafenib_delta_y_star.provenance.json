@@ -1,0 +1,14 @@
+{
+  "source": "GSE121153",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121153",
+  "platform": "GPL570",
+  "tag": "gse121153_huh7_cell_sorafenib",
+  "resistant": [
+    "GSM3427016"
+  ],
+  "parental": [
+    "GSM3427015"
+  ],
+  "n_probes_mapped": 43534,
+  "definition": "mean(resistant) - mean(parental) on series-matrix intensities, probes collapsed by symbol mean"
+}

@@ -1,0 +1,6 @@
+method	HepG2	K562	RPE1	Jurkat
+revpert	266.0	25.0	90.0	238.5
+pearson_pred_gallery	572.0	46.0	185.5	574.5
+ridge_delta_to_P	638.0	45.5	180.0	708.0
+gem_lite_topDEG_corr	587.0	48.5	195.0	565.5
+cmap_lite_pred_gallery	668.0	53.5	215.5	653.0

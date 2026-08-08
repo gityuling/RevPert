@@ -1,0 +1,10 @@
+{
+  "source": "GSE158552",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158552",
+  "line": "HepG2",
+  "drug": "JQ1",
+  "target": "BRD4",
+  "expected_arm": "A",
+  "definition": "mean(log2(unstranded_count+1) JQ1) - mean(log2(unstranded_count+1) DMSO), Ensembl\u2192symbol",
+  "n_genes": 43945
+}

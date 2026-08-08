@@ -1,0 +1,17 @@
+name: revpert
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - pytorch
+  - anndata
+  - h5py
+  - tqdm
+  - requests
+  - matplotlib
+  - pip

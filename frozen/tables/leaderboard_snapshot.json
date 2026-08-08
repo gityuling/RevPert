@@ -1,0 +1,35 @@
+{
+  "primary_method": "revpert",
+  "definition": "gallery-native residual: z(Pearson)+\u03b1 z(GalleryDual), fused InfoNCE",
+  "archived": "prototype dual-encoder (see ARCHIVED_DUAL_ENCODER.md)",
+  "essential_seed1": {
+    "HepG2": {
+      "revpert_median": 266.0,
+      "pearson_median": 572.0,
+      "fold": 2.1503759398496243
+    },
+    "K562": {
+      "revpert_median": 25.0,
+      "pearson_median": 46.0,
+      "fold": 1.84
+    },
+    "RPE1": {
+      "revpert_median": 90.0,
+      "pearson_median": 185.5,
+      "fold": 2.061111111111111
+    },
+    "Jurkat": {
+      "revpert_median": 238.5,
+      "pearson_median": 574.5,
+      "fold": 2.408805031446541
+    }
+  },
+  "essential_multiseed_mean_median": {
+    "HepG2": 261.6,
+    "Jurkat": 232.2,
+    "K562": 23.4,
+    "RPE1": 78.3
+  },
+  "genetic_vs_pdgrapher": "10/10 RevPert better median rank",
+  "essential_vs_pearson_seeds": "20/20 RevPert better"
+}

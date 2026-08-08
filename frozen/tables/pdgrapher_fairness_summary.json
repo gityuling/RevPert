@@ -1,0 +1,11 @@
+{
+  "n_lines": 10,
+  "revpert_beats_pdgrapher_median": 10,
+  "revpert_beats_pearson_median": 10,
+  "fold_vs_pdgrapher_min": 6.919398173025256,
+  "fold_vs_pdgrapher_max": 15.05085682697623,
+  "fold_vs_pdgrapher_median": 10.338500524924882,
+  "protocol_tsv": "tables/pdgrapher_fairness_protocol.tsv",
+  "perline_tsv": "tables/pdgrapher_fairness_perline.tsv",
+  "claim_boundary": "Comparison is fair on splits, gene axis restriction, \u0394Y definition and ranking metrics; model classes differ (gallery residual scorer vs GNN discovery)."
+}

@@ -1,0 +1,17 @@
+{
+  "source": "GEO GSE193094",
+  "pubmed": 35172562,
+  "line": "HL-60 AML",
+  "contrast": "araC_res_minus_parental",
+  "transform": "log2(norm+1) mean(res) - mean(parental)",
+  "n_genes": 20633,
+  "claim_boundary": "blood usage pilot on K562 GWPS gallery; not AML target discovery",
+  "signed_anchors": {
+    "araC": {
+      "DCK": "down / LOF phenocopy expected on KO acquisition arm"
+    },
+    "dnr": {
+      "ABCC1": "up / activation heuristic expected on activation arm"
+    }
+  }
+}

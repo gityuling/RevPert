@@ -1,0 +1,8 @@
+{
+  "source": "GSE143233",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143233",
+  "definition": "log2(sorafenib-resistant_FPKM+1) - log2(normal_FPKM+1); columns already cohort-averaged in GEO suppl",
+  "n_genes": 25343,
+  "contrast": "sorafenib-resistant HCC tissue vs normal tissue (patient bulk; n=3 vs 3 per GEO)",
+  "paper_focus": "METTL3 / m6A-FOXO3 axis"
+}

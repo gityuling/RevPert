@@ -1,0 +1,11 @@
+{
+  "source": "GSE159164",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159164",
+  "line": "Huh7",
+  "drug": "rapamycin",
+  "target": "MTOR",
+  "expected_arm": "A",
+  "note": "shControl \u00b1 rapamycin only (ARID1A arms unused)",
+  "definition": "log2(FPKM+1)_Rapa - log2(FPKM+1)_vehicle on AccID symbols",
+  "n_genes": 19930
+}

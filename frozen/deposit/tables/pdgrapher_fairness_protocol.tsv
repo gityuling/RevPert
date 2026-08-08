@@ -1,0 +1,10 @@
+dimension	matched	detail
+Data resource	yes	PDGrapher genetic LINCS L1000 screens (10 lines); not Perturb-seq
+Splits	yes	Official within-line random 5-fold genetic splits (backward indices)
+Primary metrics	yes	Median rank of true intervention + Recall@10 on the same ranking interface
+Query definition	yes	ΔY = treated − diseased on the 10,716-gene PPI-intersected axis
+Catalog restriction	yes	Within each fold, genes restricted to those available to all compared methods before ranking
+Gallery for matching baselines / RevPert	yes	Train-fold mean ΔY by intervention gene (no held-out leakage into gallery)
+Official PDGrapher training recipe	partial	Published genetic model / checkpoints scored under the identity-recovery ranking interface; training recipe unchanged beyond runtime stability settings
+Model class / objective	no	RevPert is gallery-native residual retrieval; PDGrapher is a GNN perturbation-discovery model — fair on ranking metrics, not architecture-matched
+Pooled leaderboard with Essential	no	Resources never pooled; Essential primary baseline is Pearson, genetic primary baseline is official PDGrapher

@@ -1,0 +1,7 @@
+{
+  "source": "GSE186191",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186191",
+  "line": "huh7",
+  "drug": "lenvatinib",
+  "definition": "mean(log2(expr+1) LR) - mean(log2(expr+1) parental)"
+}

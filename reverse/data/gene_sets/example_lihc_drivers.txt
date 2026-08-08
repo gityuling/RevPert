@@ -1,0 +1,22 @@
+# Example LIHC / liver-cancer related drivers for Phase-2 enrichment smoke tests.
+# Replace with curated COSMIC / OncoKB / DepMap lists for manuscript analyses.
+MYC
+CTNNB1
+TP53
+AXIN1
+ARID1A
+KEAP1
+NFE2L2
+MET
+CCND1
+TERT
+APC
+RB1
+CDKN2A
+PTEN
+KRAS
+NRAS
+BRAF
+EGF
+EGFR
+IGF2

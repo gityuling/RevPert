@@ -1,0 +1,60 @@
+{
+  "source": "GSE322742",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322742",
+  "definition": "mean(log2(FPKM+1) SR) - mean(log2(FPKM+1) WT)",
+  "samples": {
+    "GSM9557553": {
+      "line": "HepG2",
+      "condition": "WT",
+      "rep": 1,
+      "file": "GSM9557553_sample1_FPKM_values.csv.gz"
+    },
+    "GSM9557554": {
+      "line": "HepG2",
+      "condition": "WT",
+      "rep": 2,
+      "file": "GSM9557554_sample2_FPKM_values.csv.gz"
+    },
+    "GSM9557555": {
+      "line": "HepG2",
+      "condition": "SR",
+      "rep": 1,
+      "file": "GSM9557555_sample3_FPKM_values.csv.gz"
+    },
+    "GSM9557556": {
+      "line": "HepG2",
+      "condition": "SR",
+      "rep": 2,
+      "file": "GSM9557556_sample4_FPKM_values.csv.gz"
+    },
+    "GSM9557557": {
+      "line": "Huh7",
+      "condition": "WT",
+      "rep": 1,
+      "file": "GSM9557557_sample5_FPKM_values.csv.gz"
+    },
+    "GSM9557558": {
+      "line": "Huh7",
+      "condition": "WT",
+      "rep": 2,
+      "file": "GSM9557558_sample6_FPKM_values.csv.gz"
+    },
+    "GSM9557559": {
+      "line": "Huh7",
+      "condition": "SR",
+      "rep": 1,
+      "file": "GSM9557559_sample7_FPKM_values.csv.gz"
+    },
+    "GSM9557560": {
+      "line": "Huh7",
+      "condition": "SR",
+      "rep": 2,
+      "file": "GSM9557560_sample8_FPKM_values.csv.gz"
+    }
+  },
+  "n_ensembl": 63241,
+  "n_mapped_symbols": 46164,
+  "line": "Huh7",
+  "n_genes_symbol": 44611,
+  "out_tsv": "reverse/data/signatures/huh7_sorafenib_delta_y_star.tsv"
+}

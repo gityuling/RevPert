@@ -1,0 +1,15 @@
+{
+  "source": "GEO GSE120932",
+  "platform": "GPL10558 Illumina HumanHT-12 V4.0",
+  "pubmed": 32106243,
+  "contrast": "mean(ir_no_drug) - mean(parental K562)",
+  "n_parental": 3,
+  "n_resistant": 3,
+  "n_genes": 20756,
+  "claim_boundary": "K562 lineage-matched imatinib-resistance usage; not CML target discovery",
+  "paper_markers_noted": [
+    "IFITM3",
+    "CD36",
+    "CD33"
+  ]
+}

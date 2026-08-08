@@ -59,10 +59,10 @@ else
 fi
 
 if find . -iname '*dual_encoder_v2*' | head -5 | grep -q .; then
-  echo "FAIL: dual_encoder_v2 artifacts present"
+  echo "FAIL: legacy prototype tree present"
   fail=1
 else
-  echo "OK: no dual_encoder_v2 tree"
+  echo "OK: no legacy prototype tree"
 fi
 
 if find . -name '*.pt' -o -name '*.h5ad' | head -5 | grep -q .; then

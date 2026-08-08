@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run reverse Task-1 on four Essential lines: train dual-encoder v2 → fair compare → aggregate → figures.
+# Run Essential Task-1 on four lines: train RevPert → fair compare → aggregate.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"

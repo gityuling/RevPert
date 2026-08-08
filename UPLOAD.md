@@ -16,4 +16,4 @@ git push -u origin main
 ```
 
 Do **not** push the parent `linearbaseline` monorepo: it contains private paths,
-archived dual-encoder trees, large raw results, and manuscript working files.
+large raw results, and manuscript working files.

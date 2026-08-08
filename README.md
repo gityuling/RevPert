@@ -8,8 +8,6 @@ shortlist), using signed Pearson connectivity plus a learned residual score.
 This repository contains analysis code, signature-building utilities, frozen
 numeric tables from the manuscript, and scripts to retrain / rescore RevPert.
 
-Prototype dual-encoder code is **not** included (archived separately).
-
 ## Install
 
 ```bash

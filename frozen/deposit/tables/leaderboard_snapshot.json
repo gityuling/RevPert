@@ -1,7 +1,6 @@
 {
   "primary_method": "revpert",
   "definition": "gallery-native residual: z(Pearson)+\u03b1 z(GalleryDual), fused InfoNCE",
-  "archived": "prototype dual-encoder (see ARCHIVED_DUAL_ENCODER.md)",
   "essential_seed1": {
     "HepG2": {
       "revpert_median": 266.0,

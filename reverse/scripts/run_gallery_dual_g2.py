@@ -761,8 +761,8 @@ def main() -> None:
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2, default=str))
     (out / "README.md").write_text(
-        "# Gallery-Dual (G2)\n\n"
-        "Expression-gallery dual encoder + optional Pearson residual fusion.\n"
+        "# Gallery-Dual (G2) / RevPert\n\n"
+        "Expression-gallery residual scorer: signed Pearson + learned profile similarity.\n"
         "Same scorer for identity recovery and resistance dual-arm.\n",
         encoding="utf-8",
     )

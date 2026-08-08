@@ -7,7 +7,7 @@ Run before `git push` to a public GitHub repository.
 - [ ] No absolute personal paths (`/home/...`, `C:\Users\...`)
 - [ ] No API keys, tokens, passwords, `.env` files
 - [ ] No Chinese (or other non-English) in README / docs / user-facing strings
-- [ ] No dual-encoder checkpoints or `dual_encoder_v2` tree
+- [ ] No legacy prototype trees or unpublished checkpoints outside this release
 - [ ] No manuscript author metadata you are not ready to reveal (double-blind)
 - [ ] No huge binaries: `*.h5ad`, `*.pt`, raw GEO tarballs (gitignored)
 - [ ] `LICENSE` present; third-party data licenses acknowledged in README

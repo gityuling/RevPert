@@ -218,8 +218,7 @@ def aggregate(cells, seeds) -> None:
     (ess / "README.md").write_text(
         "# RevPert Essential identity recovery\n\n"
         "Primary method: **revpert** = Pearson residual + gallery dual (fused InfoNCE).\n"
-        "Ablations: `pearson_gallery`, `revpert_learn_only`, `revpert_retune`.\n"
-        "Legacy prototype dual-encoder: see `../ARCHIVED_DUAL_ENCODER.md`.\n",
+        "Ablations: `pearson_gallery`, `revpert_learn_only`, `revpert_retune`.\n",
         encoding="utf-8",
     )
 
@@ -277,8 +276,7 @@ def main() -> None:
         "**RevPert** learns residual similarity on an expression KO gallery while "
         "preserving signed Pearson connectivity.\n\n"
         "- `essential/` — Replogle Essential 4 lines × seeds\n"
-        "- `genetic/` — PDGrapher genetic 10 lines (official folds)\n"
-        "- Legacy dual-encoder archived: `../ARCHIVED_DUAL_ENCODER.md`\n",
+        "- `genetic/` — PDGrapher genetic 10 lines (official folds)\n",
         encoding="utf-8",
     )
 

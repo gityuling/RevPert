@@ -20,4 +20,4 @@ training selection only.
 | G5 | TxPert x-cell LOO gallery | Forward gallery | Yes (builder) | gallery recovery scripts | done |
 | G6 | UniPert-ridge gallery | Forward gallery | Yes (builder) | UniPert probe scripts | done |
 
-**Note:** TxPert / GEARS / scGPT / UniPert enter as \(\widehat{\Delta Y}\) gallery builders under Pearson matching, not as dedicated reverse models.
+**Note:** TxPert / GEARS / scGPT / UniPert enter as predicted-gallery builders under Pearson matching, not as dedicated reverse models.

@@ -1,7 +1,7 @@
 # RevPert: ranking candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
 
 **RevPert** ranks a fixed knockout catalog for an observed transcriptomic
-contrast \(\Delta Y^\star = Y_B - Y_A\). It combines signed Pearson connectivity
+contrast (`delta_y_star = YB - YA`). It combines signed Pearson connectivity
 with a learned residual on a predicted gallery and returns a directional
 shortlist, not a causal target list.
 
@@ -66,7 +66,7 @@ Replogle et al. and the packaging source you use.
 
 ### 2. Screen-external signatures (processed vectors shipped here)
 
-Processed \(\Delta Y^\star\) files: `reverse/data/signatures/*.tsv`  
+Processed `delta_y_star` files: `reverse/data/signatures/*.tsv`  
 Provenance (accession + contrast): matching `*.provenance.json`
 
 | Accession | Role | Download |
@@ -129,7 +129,7 @@ Ranking tables: `frozen/tables/`.
 |------|------|
 | `reverse/src/` | Core library |
 | `reverse/scripts/` | Training, Essential matrix, GWPS CML, signature builders |
-| `reverse/data/signatures/` | Processed \(\Delta Y^\star\) + provenance JSON |
+| `reverse/data/signatures/` | Processed `delta_y_star` vectors + provenance JSON |
 | `reverse/data/gene_sets/` | Focus / enrichment gene lists |
 | `frozen/tables/` | Manuscript ranking tables |
 | `docs/` | Reproducibility notes |

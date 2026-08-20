@@ -26,7 +26,7 @@ hash_if_exists() {
 
 # Protocol / deposit docs
 hash_if_exists "frozen/deposit/docs/METHODS_REGISTRY.md"
-hash_if_exists "frozen/deposit/docs/TASK1_PROTOCOL.md"
+hash_if_exists "frozen/deposit/docs/IDENTITY_PROTOCOL.md"
 hash_if_exists "frozen/deposit/SHA256SUMS"
 
 # Manuscript numeric tables

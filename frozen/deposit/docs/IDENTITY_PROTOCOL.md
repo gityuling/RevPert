@@ -1,12 +1,12 @@
-# Task-1 protocol — held-out KO identity recovery
+# Identity-recovery protocol — held-out knockout ranking
 
 **Goal:** Rank catalog genetic interventions for a held-out query expression
-shift under a shared split and catalog (RevPert primary method).
+shift under a shared split and catalog.
 
 ## 1. Task definition
 
 | Item | Definition |
-|------|------------|
+|------|-------------|
 | **Query** | Observed pseudo-bulk knockout response \(\Delta Y(g^\star)\) for a held-out test KO \(g^\star\) |
 | **Catalog** | Candidate KOs with forward-predicted or train-fold \(\widehat{\Delta Y}(g)\) |
 | **Output** | Ranking of catalog KOs; success = recovering the true \(g^\star\) |

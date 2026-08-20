@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build RevPert statistics, PDGrapher fairness audit, and anonymous deposit pack.
+"""Build RevPert statistics, PDGrapher fairness audit, and ranking-table deposit.
 
 1) Essential seed-1 per-query ranks (RevPert vs Pearson) + Wilcoxon/bootstrap
 2) Genetic protocol fairness audit table (matched vs non-matched dimensions)
-3) Anonymous reproducible deposit under reverse/deposit/anonymous_revpert/
+3) Ranking-table deposit under reverse/deposit/revpert_tables/
 
-Does not retrain models; reloads frozen RevPert checkpoints.
+Does not retrain models; reloads existing RevPert checkpoints.
 """
 
 from __future__ import annotations
@@ -303,9 +303,9 @@ def build_pdgrapher_fairness_audit() -> pd.DataFrame:
     return per
 
 
-def build_anonymous_deposit(stats: pd.DataFrame) -> Path:
-    """Stage an anonymous, double-blind-safe deposit tree with checksums."""
-    deposit = _ROOT / "reverse/deposit/anonymous_revpert"
+def build_ranking_deposit(stats: pd.DataFrame) -> Path:
+    """Stage a ranking-table deposit tree with checksums."""
+    deposit = _ROOT / "reverse/deposit/revpert_tables"
     if deposit.exists():
         shutil.rmtree(deposit)
     for sub in ("tables", "figures_source", "essential_ranks", "genetic", "scripts", "docs"):
@@ -338,12 +338,12 @@ def build_anonymous_deposit(stats: pd.DataFrame) -> Path:
             deposit / "scripts" / "build_revpert_manuscript_tables.py",
         ),
         (
-            _ROOT / "reverse/benchmark/METHODS_REGISTRY.md",
+            _ROOT / "frozen/deposit/docs/METHODS_REGISTRY.md",
             deposit / "docs" / "METHODS_REGISTRY.md",
         ),
         (
-            _ROOT / "reverse/manuscript/TASK1_PROTOCOL.md",
-            deposit / "docs" / "TASK1_PROTOCOL.md",
+            _ROOT / "frozen/deposit/docs/IDENTITY_PROTOCOL.md",
+            deposit / "docs" / "IDENTITY_PROTOCOL.md",
         ),
     ]
     for cell in CELLS:
@@ -359,46 +359,7 @@ def build_anonymous_deposit(stats: pd.DataFrame) -> Path:
 
     readme = deposit / "README.md"
     readme.write_text(
-        """# Anonymous RevPert reproducibility deposit
-
-Double-blind peer-review package for **RevPert** (gallery-native residual reverse
-perturbation scoring). Author names and institutional paths are withheld.
-
-## Contents
-
-| Path | Description |
-|------|-------------|
-| `tables/essential_wilcoxon_bootstrap.tsv` | Seed-1 paired Wilcoxon + bootstrap CI (RevPert vs Pearson) |
-| `tables/pdgrapher_fairness_*.tsv` | Protocol audit + per-line fold vs official PDGrapher |
-| `tables/fourteen_dataset_board.tsv` | Main 14-dataset board (Essential + genetic) |
-| `essential_ranks/` | Per-query ranks for Essential seed 1 |
-| `genetic/` | Fold metrics and cell-line summaries |
-| `scripts/` | Table / stats builders (no private credentials) |
-| `docs/` | Method registry and Task-1 protocol |
-
-## Recompute Essential Wilcoxon (requires full analysis environment)
-
-```bash
-# From the full analysis repository (not this deposit alone):
-PYTHONPATH=. python reverse/scripts/build_revpert_stats_and_deposit.py
-```
-
-This deposit ships the **frozen numeric outputs** used in the manuscript SI.
-Model checkpoints are not deposited here (stated in Data availability).
-
-## Claim boundaries
-
-- Essential primary baseline: Pearson on linear L3 predicted gallery.
-- Genetic primary baseline: official PDGrapher genetic model under the same
-  median-rank / Recall@10 interface.
-- Resources are **not** pooled into one leaderboard.
-- PDGrapher comparison is fair on splits/metrics/catalog restriction; model
-  classes differ (residual gallery scorer vs GNN discovery).
-
-## Checksums
-
-See `SHA256SUMS` in this directory.
-""",
+        (_ROOT / "frozen/deposit/README.md").read_text(encoding="utf-8"),
         encoding="utf-8",
     )
 
@@ -412,16 +373,7 @@ See `SHA256SUMS` in this directory.
         rel = path.relative_to(deposit).as_posix()
         sums.append(f"{_sha256(path)}  {rel}")
     (deposit / "SHA256SUMS").write_text("\n".join(sums) + "\n", encoding="utf-8")
-
-    # Tar.gz for upload
-    archive = _ROOT / "reverse/deposit/anonymous_revpert_v1"
-    shutil.make_archive(str(archive), "gztar", root_dir=deposit.parent, base_dir=deposit.name)
-    tar = Path(str(archive) + ".tar.gz")
-    (deposit / "ARCHIVE_SHA256.txt").write_text(
-        f"{_sha256(tar)}  {tar.name}\n", encoding="utf-8"
-    )
     _log(f"Deposit: {deposit}")
-    _log(f"Archive: {tar} ({tar.stat().st_size/1e6:.2f} MB)")
     return deposit
 
 
@@ -449,7 +401,7 @@ def main() -> None:
     _log(f"device={device}")
     _ranks, stats = export_essential_seed1_ranks(device)
     build_pdgrapher_fairness_audit()
-    deposit = build_anonymous_deposit(stats)
+    deposit = build_ranking_deposit(stats)
     snip = latex_wilcoxon_snippet(stats)
     (REV / "tables" / "wilcoxon_latex_rows.txt").write_text(snip + "\n", encoding="utf-8")
     _log("\n=== Wilcoxon LaTeX rows ===\n" + snip)

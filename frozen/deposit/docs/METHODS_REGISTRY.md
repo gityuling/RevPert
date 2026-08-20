@@ -4,7 +4,7 @@ Fair inclusion rule: same held-out split, same catalog membership policy, same
 **main-table** metrics (median rank, Recall@10 / Top-10). MRR may appear in SI /
 training selection only.
 
-| ID | Method | Role | Fair on Task-1? | Implementation | Status |
+| ID | Method | Role | Fair on identity? | Implementation | Status |
 |----|--------|------|-----------------|----------------|--------|
 | B1 | pearson_pred_gallery | CMap-style matcher | Yes | `compare_fair_baselines.py` | done |
 | B2 | cmap_lite_pred_gallery | Up/down enrichment | Yes | same | done |

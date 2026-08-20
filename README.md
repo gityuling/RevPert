@@ -1,15 +1,12 @@
 # RevPert: ranking candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
 
-**RevPert** is a gallery-native residual reverse-perturbation model: given a
-transcriptomic state contrast \(\Delta Y^\star = Y_B - Y_A\), it ranks catalog
-knockouts whose expression signatures match an observed transcriptomic shift
-(candidate-driver shortlist), using signed Pearson connectivity plus a learned
-residual score.
+**RevPert** ranks a fixed knockout catalog for an observed transcriptomic
+contrast \(\Delta Y^\star = Y_B - Y_A\). It combines signed Pearson connectivity
+with a learned residual on a predicted gallery and returns a directional
+shortlist, not a causal target list.
 
-This repository contains analysis code, signature-building utilities, frozen
-numeric tables from the manuscript, and scripts to retrain / rescore RevPert.
-
-Manuscript target: *Nature Biotechnology* (in preparation).
+This repository contains analysis code, processed query signatures, ranking
+tables, and scripts to retrain or rescore RevPert.
 
 ## Install
 
@@ -22,7 +19,7 @@ export PYTHONPATH="$PWD${PYTHONPATH:+:$PYTHONPATH}"
 
 ## License (software vs data)
 
-- **MIT** (`LICENSE`) covers **this repository's code, docs, and frozen numeric tables we computed**.
+- **MIT** (`LICENSE`) covers **this repository's code, docs, and ranking tables we computed**.
 - Third-party datasets (Replogle Perturb-seq, NCBI GEO/SRA, TCGA/UCSC Xena, PDGrapher) keep **their original terms**.
 - This repo does **not** re-license, mirror, or claim ownership of those datasets.
 - Download them from the providers below and cite the original papers / accessions.
@@ -114,7 +111,7 @@ Obtain official PDGrapher genetic models / folds from the PDGrapher authors' rel
 2. Each GEO accession you analyze  
 3. TCGA / UCSC Xena if using LIHC  
 4. PDGrapher if reporting genetic comparisons  
-5. This RevPert software / manuscript when available (`CITATION.cff`)
+5. This RevPert software (`CITATION.cff`)
 
 ## Quick start
 
@@ -124,7 +121,7 @@ python reverse/scripts/run_revpert_gwps_cml.py --epochs 30 --device cuda
 python reverse/scripts/build_revpert_stats_and_deposit.py
 ```
 
-Frozen SI tables: `frozen/tables/`.
+Ranking tables: `frozen/tables/`.
 
 ## Repository layout
 
@@ -134,8 +131,8 @@ Frozen SI tables: `frozen/tables/`.
 | `reverse/scripts/` | Training, Essential matrix, GWPS CML, signature builders |
 | `reverse/data/signatures/` | Processed \(\Delta Y^\star\) + provenance JSON |
 | `reverse/data/gene_sets/` | Focus / enrichment gene lists |
-| `frozen/tables/` | Manuscript numeric tables |
-| `docs/` | Preflight / upload checklist |
+| `frozen/tables/` | Manuscript ranking tables |
+| `docs/` | Reproducibility notes |
 | `examples/` | Shell entry points |
 
 ## Claim boundaries
@@ -146,5 +143,5 @@ Frozen SI tables: `frozen/tables/`.
 
 ## Citation
 
-Manuscript in preparation. Update `CITATION.cff` upon preprint / acceptance.
+See `CITATION.cff`. A preprint DOI will be added when posted.
 Also cite upstream data providers listed above.

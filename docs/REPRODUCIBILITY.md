@@ -34,5 +34,5 @@ tree. Entry point: `reverse/scripts/run_pdgrapher_gallery_fuse.py`.
 
 ## What is not required to verify table numbers
 
-`frozen/tables/` already contains the SI numeric exports. Retraining is needed
-only to regenerate checkpoints or to audit end-to-end training.
+`frozen/tables/` already contains the manuscript ranking-table exports. Retraining
+is needed only to regenerate checkpoints or to audit end-to-end training.

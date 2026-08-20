@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run Essential Task-1 on four lines: train RevPert → fair compare → aggregate.
+# Run Essential identity recovery on four lines: train RevPert → fair compare → aggregate.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"

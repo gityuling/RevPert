@@ -1,7 +1,7 @@
-# Anonymous RevPert reproducibility deposit
+# Ranking tables
 
-Double-blind peer-review package for **RevPert** (gallery-native residual reverse
-perturbation scoring). Author names and institutional paths are withheld.
+Numeric exports used in the manuscript: Essential ranks, LINCS / PDGrapher
+summaries, and Wilcoxon tables.
 
 ## Contents
 
@@ -13,17 +13,15 @@ perturbation scoring). Author names and institutional paths are withheld.
 | `essential_ranks/` | Per-query ranks for Essential seed 1 |
 | `genetic/` | Fold metrics and cell-line summaries |
 | `scripts/` | Table / stats builders (no private credentials) |
-| `docs/` | Method registry and Task-1 protocol |
+| `docs/` | Method registry and identity-recovery protocol |
 
 ## Recompute Essential Wilcoxon (requires full analysis environment)
 
 ```bash
-# From the full analysis repository (not this deposit alone):
 PYTHONPATH=. python reverse/scripts/build_revpert_stats_and_deposit.py
 ```
 
-This deposit ships the **frozen numeric outputs** used in the manuscript SI.
-Model checkpoints are not deposited here (stated in Data availability).
+Model checkpoints are not deposited here.
 
 ## Claim boundaries
 

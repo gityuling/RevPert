@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "RevPert: predicting candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation"
+title: "RevPert: ranking candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation"
 message: If you use this software, please cite it using these metadata.
 type: software
 authors:
@@ -10,10 +10,11 @@ authors:
     given-names: Yunqi
     email: Yunqi206@126.com
 abstract: >-
-  Gallery-native residual reverse perturbation scoring for candidate genetic
-  drivers of observed transcriptomic state transitions.
+  Gallery-native residual reverse perturbation for ranking catalogued genetic
+  hypotheses against an observed transcriptomic state contrast.
 keywords:
   - reverse perturbation
+  - ranking
   - Perturb-seq
   - transcriptomic state transition
   - drug resistance

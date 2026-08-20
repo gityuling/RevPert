@@ -1,4 +1,4 @@
-# RevPert: predicting candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
+# RevPert: ranking candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
 
 **RevPert** is a gallery-native residual reverse-perturbation model: given a
 transcriptomic state contrast \(\Delta Y^\star = Y_B - Y_A\), it ranks catalog
@@ -26,7 +26,7 @@ export PYTHONPATH="$PWD${PYTHONPATH:+:$PYTHONPATH}"
 - Third-party datasets (Replogle Perturb-seq, NCBI GEO/SRA, TCGA/UCSC Xena, PDGrapher) keep **their original terms**.
 - This repo does **not** re-license, mirror, or claim ownership of those datasets.
 - Download them from the providers below and cite the original papers / accessions.
-- RevPert outputs are **candidate-driver rankings** for follow-up, not wet-validated causal or therapeutic claims.
+- RevPert outputs are **candidate-driver rankings** for follow-up, not wet-validated causal or therapeutic claims, and not a held-out identity claim on screen-external signatures.
 
 ## Data downloads
 
@@ -50,7 +50,7 @@ $REVPERT_BENCH_ROOT/
     replogle_jurkat_essential/
     replogle_k562_gwps/all_pseudobulk_deltas.h5ad   # CML
   working_dir/results/
-    progressive_stack_fulltest/   # linear L3 predicted galleries
+    progressive_stack_fulltest/   # linear predicted galleries
     seed_*_replogle_*_split
 ```
 
@@ -63,7 +63,7 @@ $REVPERT_BENCH_ROOT/
 | SRA/GEO file manifest | https://doi.org/10.25452/figshare.plus.20022944 |
 
 Figshare+ provides K562 GWPS, K562 Essential, and RPE1 Essential processed products.
-HepG2 / Jurkat Essential and linear L3 predicted galleries should be placed under the
+HepG2 / Jurkat Essential and linear predicted galleries should be placed under the
 paths above using the same GEARS-style packaging as your forward benchmark; cite
 Replogle et al. and the packaging source you use.
 
@@ -142,7 +142,7 @@ Frozen SI tables: `frozen/tables/`.
 
 - Candidate-driver **rankings**, not wet-validated causality.
 - Primary identity metrics: median rank and Recall@10.
-- Screen-external claims use preferred-arm ranks of pre-specified anchors.
+- Screen-external HCC/CML results are a signed-geometry check on pre-specified anchors, not held-out recovery.
 
 ## Citation
 

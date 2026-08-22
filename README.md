@@ -1,6 +1,6 @@
-# RevPert: ranking candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
+# RevPert: predicting candidate drivers of transcriptomic state transitions via gallery-native reverse perturbation
 
-**RevPert** ranks a fixed knockout catalog for an observed transcriptomic
+**RevPert** predicts candidate drivers from a fixed knockout catalog for an observed transcriptomic
 contrast (`delta_y_star = YB - YA`). It combines signed Pearson connectivity
 with a learned residual on a predicted gallery and returns a directional
 shortlist, not a causal target list.
@@ -23,7 +23,7 @@ export PYTHONPATH="$PWD${PYTHONPATH:+:$PYTHONPATH}"
 - Third-party datasets (Replogle Perturb-seq, NCBI GEO/SRA, TCGA/UCSC Xena, PDGrapher) keep **their original terms**.
 - This repo does **not** re-license, mirror, or claim ownership of those datasets.
 - Download them from the providers below and cite the original papers / accessions.
-- RevPert outputs are **candidate-driver rankings** for follow-up, not wet-validated causal or therapeutic claims, and not a held-out identity claim on screen-external signatures.
+- RevPert outputs are **candidate-driver predictions** for follow-up, not wet-validated causal or therapeutic claims, and not a held-out identity claim on screen-external signatures.
 
 ## Data downloads
 
@@ -137,7 +137,7 @@ Ranking tables: `frozen/tables/`.
 
 ## Claim boundaries
 
-- Candidate-driver **rankings**, not wet-validated causality.
+- Candidate-driver **predictions**, not wet-validated causality.
 - Primary identity metrics: median rank and Recall@10.
 - Screen-external HCC/CML results are a signed-geometry check on pre-specified anchors, not held-out recovery.
 
